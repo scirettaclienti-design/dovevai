@@ -62,7 +62,11 @@ Confermo la mia presenza.`;
                         <div className="hover-fill"></div>
                     </motion.a>
 
-                    <p style={{ marginTop: '30px', fontSize: '0.8rem', color: '#444' }}>
+                    <div style={{ marginTop: '20px', color: '#888', fontSize: '0.9rem', fontWeight: '300', letterSpacing: '0.5px' }}>
+                        Apri WhatsApp, inserisci <span style={{ color: '#fff', fontWeight: '500' }}>Nome e Azienda</span>, invia.
+                    </div>
+
+                    <p style={{ marginTop: '40px', fontSize: '0.75rem', color: '#444', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         *L'accettazione della richiesta è soggetta a conferma della segreteria.
                     </p>
                 </SectionWrapper>
