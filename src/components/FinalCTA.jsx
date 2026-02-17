@@ -3,7 +3,22 @@ import { Send, Lock } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 
 const FinalCTA = () => {
-    const whatsappLink = "https://wa.me/393330000000?text=Buongiorno,%20richiedo%20l'accesso%20alla%20lista%20riservata%20per%20l'evento%20DoveVAI.%0A%0ANome:%20%0AAttività:";
+    const phoneNumber = "393476498357";
+    const message = `Buongiorno,
+richiedo l’accesso alla lista riservata per l’evento DoveVAI del 21.
+
+Nome: 
+Azienda: 
+Settore (Hotel / Tour Operator / Agenzia / Altro): 
+
+Confermo la mia presenza.`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    const handleWhatsAppAccess = (e) => {
+        e.preventDefault();
+        window.location.href = whatsappUrl;
+    };
 
     return (
         <section id="register" style={{ padding: '120px 0 100px', textAlign: 'center', background: '#050505', borderTop: '1px solid #111' }}>
@@ -17,9 +32,8 @@ const FinalCTA = () => {
                     </p>
 
                     <motion.a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={whatsappUrl}
+                        onClick={handleWhatsAppAccess}
                         whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(212, 175, 55, 0.3)' }}
                         whileTap={{ scale: 0.95 }}
                         className="cta-button"
@@ -39,7 +53,8 @@ const FinalCTA = () => {
                             letterSpacing: '1px',
                             textDecoration: 'none',
                             position: 'relative',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            cursor: 'pointer'
                         }}
                     >
                         <Lock size={18} color="#d4af37" />
