@@ -40,9 +40,7 @@ function App() {
       gestureDirection: 'vertical',
       smooth: true,
       mouseMultiplier: 1,
-      smoothTouch: true, // Re-enabled for cinematic dampening
-      touchMultiplier: 1.2, // Lowered from 2 to prevent "too fast" scrolling
-      syncTouch: true // Syncs touch scroll with native scroll perfectly
+      smoothTouch: false // Native scrolling is much more fluid and natural on iPhone
     });
 
     function raf(time) {
