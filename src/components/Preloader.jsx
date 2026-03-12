@@ -1,24 +1,23 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-const Preloader = () => {
-    const [isLoading, setIsLoading] = useState(true);
+const Preloader = ({ isLoading, setIsLoading }) => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 2200);
         return () => clearTimeout(timer);
-    }, []);
+    }, [setIsLoading]);
 
     return (
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
             {isLoading && (
                 <motion.div
                     key="preloader"
                     initial={{ opacity: 1 }}
-                    exit={{ opacity: 0 }} // Global fade out for the entire preloader container
-                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }} // Smooth fade duration
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
                     style={{
                         position: 'fixed',
                         top: 0,
@@ -30,7 +29,8 @@ const Preloader = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         flexDirection: 'column',
-                        background: '#000', // moved background here for simpler fade
+                        background: '#fdfbf7', // Light ivory background
+                        pointerEvents: 'all'
                     }}
                 >
                     <motion.div
@@ -49,22 +49,22 @@ const Preloader = () => {
                                 fontSize: 'clamp(3rem, 5vw, 4rem)',
                                 fontWeight: '700',
                                 letterSpacing: '-2px',
-                                color: '#fff',
+                                color: '#1a1a1a', // Dark text for light theme
                                 marginBottom: '20px',
                                 position: 'relative'
                             }}
                         >
-                            Dove<span style={{ color: '#0070f3' }}>VAI</span>
+                            Dove<span style={{ color: '#f37854' }}>VAI</span>
                         </motion.div>
 
-                        <div style={{ width: '200px', height: '2px', background: '#333', overflow: 'hidden', borderRadius: '2px' }}>
+                        <div style={{ width: '200px', height: '2px', background: 'rgba(243, 120, 84, 0.2)', overflow: 'hidden', borderRadius: '2px' }}>
                             <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: '100%' }}
                                 transition={{ duration: 1.8, ease: "easeInOut" }}
                                 style={{
                                     height: '100%',
-                                    background: 'linear-gradient(90deg, transparent, #d4af37, #f3e5ab)',
+                                    background: 'linear-gradient(90deg, transparent, #f37854, #f5a75d)',
                                 }}
                             />
                         </div>

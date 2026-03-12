@@ -27,11 +27,11 @@ const ParticlesBackground = () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
+                this.size = Math.random() * 1.5 + 0.2;
                 this.baseX = this.x;
                 this.baseY = this.y;
                 this.density = (Math.random() * 30) + 1;
-                this.color = Math.random() > 0.8 ? 'rgba(0, 112, 243, 0.6)' : 'rgba(212, 175, 55, 0.5)'; // Electric Blue accent or Gold
+                this.color = Math.random() > 0.5 ? 'rgba(255, 255, 255, 0.4)' : 'rgba(212, 175, 55, 0.3)'; // White and Gold dust
             }
 
             update() {
@@ -83,22 +83,7 @@ const ParticlesBackground = () => {
                 particle.draw();
             });
 
-            // Connect particles
-            for (let a = 0; a < particlesArray.length; a++) {
-                for (let b = a; b < particlesArray.length; b++) {
-                    const dx = particlesArray[a].x - particlesArray[b].x;
-                    const dy = particlesArray[a].y - particlesArray[b].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 100) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(100, 100, 100, ${0.1 - distance / 1000})`;
-                        ctx.lineWidth = 0.2;
-                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                        ctx.stroke();
-                    }
-                }
-            }
+            // Removed connections for a cleaner, cinematic dust look
             animationFrameId = requestAnimationFrame(animate);
         };
         animate();

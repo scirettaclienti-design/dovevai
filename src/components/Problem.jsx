@@ -36,20 +36,20 @@ const Problem = () => {
         {
             number: 30,
             suffix: '%',
-            label: "Commissioni OTA",
-            detail: "Margine perso su ogni prenotazione"
+            label: "Margine Recuperato",
+            detail: "Zero commissioni OTA. Il profitto resta a te."
         },
         {
-            number: 70,
+            number: 100,
             suffix: '%',
-            label: "Traffico Vincolato",
-            detail: "Clienti controllati da piattaforme"
+            label: "Traffico Diretto",
+            detail: "Nessun intermediario tra te e il cliente."
         },
         {
             number: 40,
             suffix: '%',
-            label: "Crescita Diretta",
-            detail: "Con funnel proprietari AI-driven",
+            label: "Crescita Automatica",
+            detail: "Motore AI predittivo che lavora H24.",
             highlight: true
         }
     ];
@@ -59,7 +59,7 @@ const Problem = () => {
             <div className="luxury-container" style={{ position: 'relative', zIndex: 1 }}>
                 <SectionWrapper>
                     <h2 style={{ textAlign: 'center', marginBottom: '80px', fontSize: '2.5rem', fontWeight: '300', color: '#888' }}>
-                        IL <span style={{ color: '#fff', fontWeight: 'bold' }}>MERCATO OGGI</span>
+                        LA <span style={{ color: '#fff', fontWeight: 'bold' }}>SOLUZIONE DEFINITIVA</span>
                     </h2>
                 </SectionWrapper>
 

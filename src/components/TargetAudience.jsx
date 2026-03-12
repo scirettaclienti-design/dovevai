@@ -5,10 +5,10 @@ import { BedDouble, Plane, Map, Building2 } from 'lucide-react';
 
 const TargetAudience = () => {
     const targets = [
-        { icon: <BedDouble size={32} />, title: "Hotel & B&B", subtitle: "Aumenta occupazione e ADR" },
-        { icon: <Plane size={32} />, title: "Tour Operator", subtitle: "Automatizza la gestione viaggi" },
-        { icon: <Map size={32} />, title: "Guide Turistiche", subtitle: "Digitalizza e scala le tue competenze" },
-        { icon: <Building2 size={32} />, title: "Agenzie", subtitle: "Offri servizi innovativi ai clienti" }
+        { icon: <BedDouble size={32} />, title: "Hotel & Resort", subtitle: "Aumenta i margini diretti" },
+        { icon: <Plane size={32} />, title: "Tour Operator", subtitle: "Viaggi creati su misura dall'AI" },
+        { icon: <Map size={32} />, title: "Guide Locali", subtitle: "Scala le tue competenze" },
+        { icon: <Building2 size={32} />, title: "Brand", subtitle: "Nuove esperienze per i clienti" }
     ];
 
     return (

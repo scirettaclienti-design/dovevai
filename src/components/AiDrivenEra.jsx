@@ -6,18 +6,18 @@ const AiDrivenEra = () => {
     const innovations = [
         {
             icon: <Smartphone size={40} />,
-            title: "Funnel Prenotazioni Dirette",
-            desc: "Sganciati dalle OTA. Porta il cliente dalla scoperta alla conferma senza intermediari."
+            title: "Zero Intermediari",
+            desc: "Un funnel diretto, fluido e invisibile. Dal primo tocco alla prenotazione, il cliente è tuo."
         },
         {
             icon: <MessageCircle size={40} />,
-            title: "Automazioni WhatsApp",
-            desc: "Risposte istantanee 24/7. Gestisci richieste, preventivi e upsell mentre dormi."
+            title: "Concierge 24/7",
+            desc: "La nostra AI risponde, consiglia e converte via chat mentre dormi. Perfetta operatività H24."
         },
         {
             icon: <Sparkles size={40} />,
-            title: "Esperienze Personalizzate AI",
-            desc: "Offri percorsi su misura che emozionano e aumentano il valore percepito del soggiorno."
+            title: "Design su Misura",
+            desc: "Ogni itinerario è generato dinamicamente attorno ai desideri dell'utente. Cessione garantita di un'esperienza VIP."
         }
     ];
 
@@ -27,9 +27,9 @@ const AiDrivenEra = () => {
                 <SectionWrapper>
                     <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                         <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '20px' }}>
-                            L'ERA <span style={{ color: '#0070f3', textShadow: '0 0 25px rgba(0,112,243,0.3)' }}>AI-DRIVEN</span>
+                            IL NUOVO <span style={{ color: '#0070f3', textShadow: '0 0 25px rgba(0,112,243,0.3)' }}>PARADIGMA</span>
                         </h2>
-                        <div style={{ width: '80px', height: '3px', background: 'linear-gradient(90deg, transparent, #d4af37, transparent)', margin: '0 auto' }}></div>
+                        <div style={{ width: '80px', height: '3px', background: 'linear-gradient(90deg, transparent, #0070f3, transparent)', margin: '0 auto' }}></div>
                     </div>
                 </SectionWrapper>
 
