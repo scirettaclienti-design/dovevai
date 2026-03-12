@@ -40,8 +40,9 @@ function App() {
       gestureDirection: 'vertical',
       smooth: true,
       mouseMultiplier: 1,
-      smoothTouch: false,
+      smoothTouch: false, // Critical: Disable hijack on mobile touch
       touchMultiplier: 2,
+      syncTouch: true // Syncs touch scroll with native scroll perfectly
     });
 
     function raf(time) {
